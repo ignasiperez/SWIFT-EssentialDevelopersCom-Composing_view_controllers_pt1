@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IFH-FP-wyn">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Player ScoreVC-->
+        <scene sceneID="U20-hp-aGO">
+            <objects>
+                <viewController id="IFH-FP-wyn" customClass="PlayerScoreVC" customModule="VCCompositionWithStoryboards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Isn-vD-Ovt" userLabel="Root_View">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgK-ge-nMq" userLabel="Player1_View">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ignasi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbL-SR-6kf" userLabel="Name_Label">
+                                        <rect key="frame" x="10" y="10" width="394" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2211" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbr-JJ-sK2" userLabel="Score_Label">
+                                        <rect key="frame" x="10" y="51" width="394" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="RbL-SR-6kf" firstAttribute="top" secondItem="hgK-ge-nMq" secondAttribute="top" constant="10" id="BgA-tc-mXq"/>
+                                    <constraint firstAttribute="trailing" secondItem="RbL-SR-6kf" secondAttribute="trailing" constant="10" id="EDz-we-3o4"/>
+                                    <constraint firstAttribute="trailing" secondItem="tbr-JJ-sK2" secondAttribute="trailing" constant="10" id="EKc-0w-muP"/>
+                                    <constraint firstItem="tbr-JJ-sK2" firstAttribute="leading" secondItem="hgK-ge-nMq" secondAttribute="leading" constant="10" id="Km1-nT-uSg"/>
+                                    <constraint firstItem="RbL-SR-6kf" firstAttribute="leading" secondItem="hgK-ge-nMq" secondAttribute="leading" constant="10" id="Tzy-Sc-MG5"/>
+                                    <constraint firstAttribute="bottom" secondItem="tbr-JJ-sK2" secondAttribute="bottom" constant="10" id="fHc-b3-Eei"/>
+                                    <constraint firstAttribute="height" constant="90" id="vMi-mD-o59"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="weq-Oz-0YE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hgK-ge-nMq" firstAttribute="trailing" secondItem="weq-Oz-0YE" secondAttribute="trailing" id="lCw-lN-Qvo"/>
+                            <constraint firstItem="hgK-ge-nMq" firstAttribute="top" secondItem="weq-Oz-0YE" secondAttribute="top" id="uF8-Mm-v13"/>
+                            <constraint firstItem="hgK-ge-nMq" firstAttribute="leading" secondItem="weq-Oz-0YE" secondAttribute="leading" id="xW3-NF-CBI"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="414" height="90"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="RbL-SR-6kf" id="jZJ-1i-dec"/>
+                        <outlet property="scoreLabel" destination="tbr-JJ-sK2" id="uzi-9T-7Gx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MzA-H3-5Wk" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-854" y="-409"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
