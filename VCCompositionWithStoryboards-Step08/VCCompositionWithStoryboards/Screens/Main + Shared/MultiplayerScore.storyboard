@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cJW-mw-Tum">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--PlayerScoreOne-->
+        <scene sceneID="AlY-H8-eaI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PlayerScoreOne" id="PXj-z4-rOk" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Dw-3R-ixr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-567" y="-903"/>
+        </scene>
+        <!--PlayerScoreTwo-->
+        <scene sceneID="ZCv-sh-jUA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PlayerScoreTwo" id="KVC-3s-eSp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4GB-vA-ov6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-188" y="-903"/>
+        </scene>
+        <!--Multiplayer ScoreVC-->
+        <scene sceneID="s4W-u7-1gQ">
+            <objects>
+                <viewController id="cJW-mw-Tum" customClass="MultiplayerScoreVC" customModule="VCCompositionWithStoryboards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4mU-50-hEJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vGY-Mx-PtJ" userLabel="PlayerOne_Container_View">
+                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="bR3-uJ-eyj"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="PXj-z4-rOk" kind="embed" identifier="go_to_PlayerScoreOne" id="xOv-pQ-qbz"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aQb-46-tij" userLabel="PlayerTwo_Container_View">
+                                <rect key="frame" x="207.5" y="0.0" width="167.5" height="90"/>
+                                <connections>
+                                    <segue destination="KVC-3s-eSp" kind="embed" identifier="go_to_PlayerScoreTwo" id="2cp-AF-hUM"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQs-8q-Crp" userLabel="Versus_Label">
+                                <rect key="frame" x="172.5" y="0.0" width="30" height="90"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="2Lb-zw-CqM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Z11-Bk-Pfs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vGY-Mx-PtJ" firstAttribute="height" secondItem="wQs-8q-Crp" secondAttribute="height" id="42Y-p8-6t0"/>
+                            <constraint firstItem="vGY-Mx-PtJ" firstAttribute="top" secondItem="Z11-Bk-Pfs" secondAttribute="top" id="928-Wc-nvX"/>
+                            <constraint firstItem="aQb-46-tij" firstAttribute="leading" secondItem="wQs-8q-Crp" secondAttribute="trailing" constant="5" id="Oiv-FK-umb"/>
+                            <constraint firstItem="Z11-Bk-Pfs" firstAttribute="trailing" secondItem="aQb-46-tij" secondAttribute="trailing" id="SRM-Yd-2Ke"/>
+                            <constraint firstItem="aQb-46-tij" firstAttribute="top" secondItem="Z11-Bk-Pfs" secondAttribute="top" id="Y2g-Ji-R1i"/>
+                            <constraint firstItem="vGY-Mx-PtJ" firstAttribute="leading" secondItem="Z11-Bk-Pfs" secondAttribute="leading" id="bjf-X7-TSG"/>
+                            <constraint firstItem="wQs-8q-Crp" firstAttribute="leading" secondItem="vGY-Mx-PtJ" secondAttribute="trailing" constant="5" id="bxf-YU-fxk"/>
+                            <constraint firstItem="aQb-46-tij" firstAttribute="height" secondItem="vGY-Mx-PtJ" secondAttribute="height" id="fYB-tM-WzM"/>
+                            <constraint firstItem="wQs-8q-Crp" firstAttribute="top" secondItem="aQb-46-tij" secondAttribute="top" id="mMi-13-Ne1"/>
+                            <constraint firstItem="aQb-46-tij" firstAttribute="width" secondItem="vGY-Mx-PtJ" secondAttribute="width" id="pMM-zA-LgE"/>
+                        </constraints>
+                    </view>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <size key="freeformSize" width="375" height="90"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PPr-nC-Bl5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-369" y="-1152"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
